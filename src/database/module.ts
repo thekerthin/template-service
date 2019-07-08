@@ -18,4 +18,4 @@ const repositories = TypeOrmModule.forFeature([TemplateRepository]);
   providers: [TemplateRepository],
   exports: [repositories],
 })
-export class DBModule {}
+export class DBModule { }

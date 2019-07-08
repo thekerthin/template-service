@@ -5,4 +5,4 @@ import { DomainModule } from './domain/module';
 @Module({
   imports: [ApiModule, DomainModule],
 })
-export class AppModule {}
+export class AppModule { }

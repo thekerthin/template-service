@@ -1,10 +1,5 @@
 {
-  "extends": [
-    "tslint-config-prettier"
-    // "tslint-plugin-prettier"
-  ],
   "rules": {
-    // "prettier": true,
     "newline-before-return": false,
     "prefer-function-over-method": false,
     "array-type": false,

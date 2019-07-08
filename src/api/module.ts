@@ -6,4 +6,4 @@ import { TemplateService } from './services/template.service';
   controllers: [TemplateController],
   providers: [TemplateService],
 })
-export class ApiModule {}
+export class ApiModule { }
