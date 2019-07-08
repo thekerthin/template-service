@@ -13,6 +13,7 @@
     "@nestjs/core": "^6.4.0",
     "@nestjs/platform-express": "^6.4.0",
     "@nestjs/typeorm": "^6.1.2",
+    "dotenv-safe": "^6.1.0",
     "pg": "^7.11.0",
     "ramda": "^0.26.1",
     "reflect-metadata": "^0.1.13",

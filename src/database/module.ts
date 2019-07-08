@@ -5,7 +5,7 @@ import { TemplateRepository } from './repositories/template.repository';
 
 const dbConfig = TypeOrmModule.forRoot({
   type: 'postgres',
-  url: 'postgresql://root:password@0.0.0.0/template_service',
+  url: process.env.DATABASE_URL,
   entities: [__dirname + '/entities/*.entity{.ts,.js}'],
   synchronize: true,
 });
