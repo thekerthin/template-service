@@ -1,7 +1,3 @@
 export class TemplateCreatedEvent {
-
-  handle(data: any) {
-
-  }
-
+  handle(data: any) {}
 }

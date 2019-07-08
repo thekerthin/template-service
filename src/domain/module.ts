@@ -5,14 +5,8 @@ import { TemplateDomainService } from './services/template-domain.services';
 
 @Global()
 @Module({
-  imports: [
-    DBModule
-  ],
-  providers: [
-    TemplateDomainService
-  ],
-  exports: [
-    TemplateDomainService
-  ]
+  imports: [DBModule],
+  providers: [TemplateDomainService],
+  exports: [TemplateDomainService],
 })
-export class DomainModule { }
+export class DomainModule {}

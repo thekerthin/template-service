@@ -3,9 +3,6 @@ import { ApiModule } from './api/module';
 import { DomainModule } from './domain/module';
 
 @Module({
-  imports: [
-    ApiModule,
-    DomainModule
-  ]
+  imports: [ApiModule, DomainModule],
 })
-export class AppModule { }
+export class AppModule {}

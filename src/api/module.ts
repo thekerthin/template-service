@@ -3,11 +3,7 @@ import { TemplateController } from './controllers/template.controller';
 import { TemplateService } from './services/template.service';
 
 @Module({
-  controllers: [
-    TemplateController
-  ],
-  providers: [
-    TemplateService
-  ]
+  controllers: [TemplateController],
+  providers: [TemplateService],
 })
-export class ApiModule { }
+export class ApiModule {}

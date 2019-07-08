@@ -1,7 +1,11 @@
 // Method Decorator
 // TODO: put this in CQRS package
 export function EmitEvent({ }) {
-  return function (target: Object, key: string | symbol, descriptor: PropertyDescriptor) {
+  return function (
+    target: Object,
+    key: string | symbol,
+    descriptor: PropertyDescriptor,
+  ) {
     const original = descriptor.value;
 
     descriptor.value = function (...args: any[]) {

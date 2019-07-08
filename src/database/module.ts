@@ -10,21 +10,12 @@ const dbConfig = TypeOrmModule.forRoot({
   synchronize: true,
 });
 
-const repositories = TypeOrmModule.forFeature([
-  TemplateRepository
-]);
+const repositories = TypeOrmModule.forFeature([TemplateRepository]);
 
 @Global()
 @Module({
-  imports: [
-    repositories,
-    dbConfig,
-  ],
-  providers: [
-    TemplateRepository
-  ],
-  exports: [
-    repositories
-  ]
+  imports: [repositories, dbConfig],
+  providers: [TemplateRepository],
+  exports: [repositories],
 })
-export class DBModule { }
+export class DBModule {}

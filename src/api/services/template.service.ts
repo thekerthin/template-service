@@ -6,7 +6,6 @@ import { findAll } from '../utils/restful';
 
 @Injectable()
 export class TemplateService {
-
   constructor(private readonly domain: TemplateDomainService) { }
 
   async findAll(): Promise<IFindAll<TemplateDomainEntity>> {
@@ -17,5 +16,4 @@ export class TemplateService {
 
     return findAll<TemplateDomainEntity>({ data, page, limit, total });
   }
-
 }
