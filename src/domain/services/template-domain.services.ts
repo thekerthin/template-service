@@ -1,9 +1,12 @@
 import { Injectable } from '@nestjs/common';
 import { TemplateDomainEntity } from '../entities/template-domain.entity';
 import { EmitEvent } from '../../shared/decorator';
+import { TemplateRepository } from '../../database/repositories/template.repository';
 
 @Injectable()
 export class TemplateDomainService {
+
+  constructor(private readonly repository: TemplateRepository) { }
 
   // TODO: evaluate if we can emit an event with an annotation - check this whether works ;)
   create() {
@@ -13,8 +16,8 @@ export class TemplateDomainService {
   }
 
   @EmitEvent({})
-  findAll(data: any): Promise<TemplateDomainEntity[]> {
-    return Promise.resolve<TemplateDomainEntity[]>([]);
+  async findAll(data: any): Promise<TemplateDomainEntity[]> {
+    return this.repository.find();
   }
 
 }

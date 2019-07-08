@@ -1,0 +1,37 @@
+version: "3.1"
+
+services:
+
+    test:
+        build:
+            context: ./.
+            dockerfile: ./test/Dockerfile
+        environment:
+            - BUS_URL=amqp://local:password@rabbitmq?heartbeat=30
+            - EVENTSTORE_URL=mongodb://mongodb:27017/eventstore
+            - POSTGRESQL_URL=postgresql://root:password@postgresql/user_service
+        depends_on:
+            - postgresql
+            # - rabbitmq
+
+    postgresql:
+        image: postgres:alpine
+        ports:
+            - 5432:5432
+        environment:
+            POSTGRES_USER: root
+            POSTGRES_PASSWORD: password
+            POSTGRES_DB: template_service
+
+    # rabbitmq:
+    #     build:
+    #         context: ./docker/rabbitmq/
+    #         dockerfile: ./Dockerfile
+    #     ports:
+    #         - 4369:4369
+    #         - 5671:5671
+    #         - 5672:5672
+    #         - 15672:15672
+    #     environment:
+    #         RABBITMQ_DEFAULT_USER: local
+    #         RABBITMQ_DEFAULT_PASS: password
