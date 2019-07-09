@@ -5,7 +5,7 @@ import { TemplateRepository } from '../../database/repositories/template.reposit
 
 @Injectable()
 export class TemplateDomainService {
-  constructor(private readonly repository: TemplateRepository) {}
+  constructor(private readonly repository: TemplateRepository) { }
 
   // TODO: evaluate if we can emit an event with an annotation - check this whether works ;)
   create() {
