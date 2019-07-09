@@ -7,7 +7,7 @@
     "build": "tsc",
     "start": "nodemon",
     "lint": "tslint -p tsconfig.json -c tslint.json",
-    "docker-dev": "docker-compose up postgresql"
+    "docker-dev": "docker-compose up postgresql rabbitmq"
   },
   "husky": {
     "hooks": {
