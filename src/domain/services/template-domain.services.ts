@@ -10,13 +10,14 @@ export class TemplateDomainService {
   ) { }
 
   // TODO: implement EmitEvent from cqrs module
-  create() {
+  async create(data: TemplateDomainEntity) {
+    await this.repository.save(data);
     // ... business rule
     // ... emit event
     // ... response (it depends of the logic) return;
   }
 
-  async findAll(data: any): Promise<TemplateDomainEntity[]> {
+  async findAll(): Promise<TemplateDomainEntity[]> {
     return this.repository.find();
   }
 
