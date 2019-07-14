@@ -49,6 +49,14 @@
     express "4.17.1"
     multer "1.4.1"
 
+"@nestjs/swagger@^3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@nestjs/swagger/-/swagger-3.0.2.tgz#b15b3354050757f648e7ebc6ae8d15a929220804"
+  integrity sha512-7cmOqa3MoK3ZXThECa3RCe5s5Bppm66DqDRz+nfTp5k2oGoFHX9t45jNU8P5aANCIEi1nA3TYwvEAGgZdV8WbA==
+  dependencies:
+    lodash "4.17.11"
+    path-to-regexp "3.0.0"
+
 "@nestjs/typeorm@^6.1.2":
   version "6.1.2"
   resolved "https://registry.yarnpkg.com/@nestjs/typeorm/-/typeorm-6.1.2.tgz#a52b694c6ba976ceef101c72d1b731206a079709"
@@ -1666,6 +1674,11 @@ locate-path@^5.0.0:
   dependencies:
     p-locate "^4.1.0"
 
+lodash@4.17.11:
+  version "4.17.11"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
+  integrity sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==
+
 lowercase-keys@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/lowercase-keys/-/lowercase-keys-1.0.1.tgz#6f9e30b47084d971a7c820ff15a6c5167b74c26f"
@@ -2243,6 +2256,11 @@ path-to-regexp@0.1.7:
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-0.1.7.tgz#df604178005f522f15eb4490e7247a1bfaa67f8c"
   integrity sha1-32BBeABfUi8V60SQ5yR6G/qmf4w=
+
+path-to-regexp@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-3.0.0.tgz#c981a218f3df543fa28696be2f88e0c58d2e012a"
+  integrity sha512-ZOtfhPttCrqp2M1PBBH4X13XlvnfhIwD7yCLx+GoGoXRPQyxGOTdQMpIzPSPKXAJT/JQrdfFrgdJOyAzvgpQ9A==
 
 pg-connection-string@0.1.3:
   version "0.1.3"
@@ -2870,6 +2888,18 @@ supports-color@^5.2.0, supports-color@^5.3.0:
   integrity sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==
   dependencies:
     has-flag "^3.0.0"
+
+swagger-ui-dist@^3.18.1:
+  version "3.23.1"
+  resolved "https://registry.yarnpkg.com/swagger-ui-dist/-/swagger-ui-dist-3.23.1.tgz#0f548d269dd959ba4f92a9b9df0376d32e8456f6"
+  integrity sha512-chMAB3JY3tJGLtswyBJGWa5L0nghbImUtFpy2CupswVVC1UsSmVwOI69oOQ1sCxEzQfC2DCu0jUD/x5SjNs+zw==
+
+swagger-ui-express@^4.0.7:
+  version "4.0.7"
+  resolved "https://registry.yarnpkg.com/swagger-ui-express/-/swagger-ui-express-4.0.7.tgz#e333441aa3bd8d18c7b83c540f077965f49e3139"
+  integrity sha512-ipXe53qDMjB2GlFcWARof15fMxX0n0wkwUturBpdovfJLaqod3WAqimwQGFXjwpWKA6hnxEPrd31yOzaYkP++A==
+  dependencies:
+    swagger-ui-dist "^3.18.1"
 
 tar@^4:
   version "4.4.10"
