@@ -5,14 +5,15 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "start": "nodemon",
+    "start-dev": "nodemon",
+    "start-prod": "node dist/index.js",
     "lint": "tslint -p tsconfig.json -c tslint.json",
     "typeorm": "ts-node ./node_modules/typeorm/cli.js",
     "migration-create": "yarn typeorm migration:create",
     "migration-generate": "yarn typeorm migration:generate",
     "migration-run": "yarn typeorm migration:run",
     "migration-revert": "yarn typeorm migration:revert",
-    "docker-dev": "docker-compose up postgresql rabbitmq"
+    "docker-compose": "docker-compose up postgresql rabbitmq"
   },
   "husky": {
     "hooks": {

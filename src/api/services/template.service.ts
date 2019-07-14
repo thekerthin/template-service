@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { TemplateDomainService } from '../../domain/services/template-domain.services';
 import { TemplateDomainEntity } from '../../domain/entities/template-domain.entity';
-import { IFindAll } from 'api/utils/interfaces/find-all.interface';
-import { CreateTemplateDto } from 'api/dtos/create-template.dto';
+import { IFindAll } from '../utils/interfaces/find-all.interface';
+import { CreateTemplateDto } from '../dtos/create-template.dto';
 import { findAll } from '../utils/restful';
 
 @Injectable()
