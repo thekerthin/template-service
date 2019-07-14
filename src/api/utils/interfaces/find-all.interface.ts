@@ -4,5 +4,5 @@ export interface IFindAll<T> {
     page: number;
     limit: number;
     total: number;
-  }
+  };
 }

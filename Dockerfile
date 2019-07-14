@@ -1,5 +1,4 @@
-# -_- change this my fish
-FROM node:8-alpine
+FROM node:10
 
 WORKDIR /app
 
@@ -10,4 +9,4 @@ RUN yarn
 
 EXPOSE 3001
 
-CMD ["yarn", "prod"]
+CMD ["yarn", "start-prod"]
