@@ -16,7 +16,7 @@ export class DomainModule implements OnModuleInit {
 
   async onModuleInit() {
     const exchange = 'template';
-    const service = 'template';
+    const service = 'template-domain-service';
     const host = process.env.BUS_URL;
 
     await this.eventBus

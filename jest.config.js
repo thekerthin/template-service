@@ -15,7 +15,7 @@ module.exports = {
     // "!**/vendor/**"
   ],
   // "forceCoverageMatch": ["**/*.ts"],
-  // "coverageDirectory": "../coverage",
+  "coverageDirectory": "coverage",
   "coverageThreshold": {
     "global": {
       "branches": 80,
