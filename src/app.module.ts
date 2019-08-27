@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
-import { ApiModule } from './api/module';
-import { DomainModule } from './domain/module';
-import { EventHandlerModule } from './event-handler/module';
+import { DomainModule } from '@domain/module';
+import { ApiModule } from '@application/api/module';
+import { EventHandlerModule } from '@application/event-handler/module';
 
 @Module({
   imports: [

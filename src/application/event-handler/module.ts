@@ -1,30 +1,24 @@
-import { Module, Global, OnModuleInit } from '@nestjs/common';
+import { Module, OnModuleInit } from '@nestjs/common';
 import { CqrsModule, EventBus, RabbitMQBusAdapter } from '@kerthin/cqrs';
 import { getPrototypes } from '@kerthin/utils';
-import { DBModule } from '@infrastructure/database/module';
 
-const services = getPrototypes(`${__dirname}/services/*{.ts,.js}`);
+const handlers = getPrototypes(`${__dirname}/handlers/*{.ts,.js}`);
 
-@Global()
 @Module({
   imports: [
-    DBModule,
     CqrsModule,
   ],
   providers: [
-    ...services,
-  ],
-  exports: [
-    ...services,
+    ...handlers,
   ],
 })
-export class DomainModule implements OnModuleInit {
+export class EventHandlerModule implements OnModuleInit {
 
   constructor(private readonly eventBus: EventBus) { }
 
   async onModuleInit() {
     const exchange = 'template';
-    const service = 'template-domain-service';
+    const service = 'template';
     const host = process.env.BUS_URL;
 
     await this.eventBus

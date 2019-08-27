@@ -1,16 +1,16 @@
 module.exports = {
-  "rootDir": "tests",
+  "rootDir": "src",
   "testRegex": ".spec.ts$",
   "moduleFileExtensions": [
     "js",
     "ts",
     // "json"
   ],
-  // "transform": {
-  //   "^.+\\.(t|j)s$": "ts-jest"
-  // },
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
   "collectCoverageFrom": [
-    // process.cwd() + "/src/**/*.ts",
+    "**/*.ts",
     // "!**/node_modules/**",
     // "!**/vendor/**"
   ],
