@@ -1,10 +1,11 @@
 import { Injectable } from '@nestjs/common';
 import { EmitEvent, EventBus } from '@kerthin/cqrs';
+import { toPaginatedResult, PaginationResult } from '@kerthin/utils';
+import TemplateRepository from '@infrastructure/database/repositories/template.repository';
 import { TemplateDomainEntity } from '../entities/template-domain.entity';
-import { TemplateRepository } from '../../database/repositories/template.repository';
 
 @Injectable()
-export class TemplateDomainService {
+export default class TemplateDomainService {
 
   constructor(
     private readonly repository: TemplateRepository,
@@ -16,8 +17,9 @@ export class TemplateDomainService {
     await this.repository.save(data);
   }
 
-  async findAll(): Promise<TemplateDomainEntity[]> {
-    return this.repository.find();
+  async findAll(options): Promise<PaginationResult<TemplateDomainEntity>> {
+    return this.repository.findAndCount()
+      .then(toPaginatedResult(options));
   }
 
 }
