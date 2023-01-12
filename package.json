@@ -33,7 +33,7 @@
     "@nestjs/typeorm": "^6.1.2",
     "@types/morgan": "^1.7.35",
     "class-transformer": "^0.2.3",
-    "class-validator": "^0.9.1",
+    "class-validator": "^0.14.0",
     "dotenv-safe": "^6.1.0",
     "morgan": "^1.9.1",
     "nest-morgan": "^1.0.1",
